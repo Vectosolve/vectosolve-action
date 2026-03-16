@@ -1,0 +1,33 @@
+name: "VectoSolve - Image to SVG"
+description: "Convert raster images (PNG, JPG, WebP) to clean SVG vector format using AI"
+author: "VectoSolve"
+
+branding:
+  icon: "image"
+  color: "blue"
+
+inputs:
+  api_key:
+    description: "Your VectoSolve API key (get one at https://vectosolve.com/dashboard)"
+    required: true
+  file_path:
+    description: "Path to the image file to convert (supports PNG, JPG, WebP, BMP, TIFF, GIF)"
+    required: true
+  output_path:
+    description: "Path where the SVG output will be saved. Defaults to the input filename with .svg extension."
+    required: false
+    default: ""
+
+outputs:
+  svg_path:
+    description: "Path to the generated SVG file"
+  processing_time_ms:
+    description: "Time taken to process the image (milliseconds)"
+  credits_used:
+    description: "Number of credits consumed"
+  credits_remaining:
+    description: "Remaining credit balance"
+
+runs:
+  using: "node20"
+  main: "dist/index.js"

@@ -1,0 +1,4 @@
+node_modules/
+
+# DO NOT ignore dist/ — GitHub Actions need the compiled code
+# dist/
