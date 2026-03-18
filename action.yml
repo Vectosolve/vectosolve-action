@@ -4,7 +4,7 @@ author: "VectoSolve"
 
 branding:
   icon: "image"
-  color: "blue"
+  color: "green"
 
 inputs:
   api_key:
