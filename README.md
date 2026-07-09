@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Convert image to SVG
-        uses: go-to-agency/vectosolve-action@v1
+        uses: Vectosolve/vectosolve-action@v1
         with:
           api_key: ${{ secrets.VECTOSOLVE_API_KEY }}
           file_path: assets/logo.png
@@ -59,7 +59,7 @@ jobs:
           done
 
       - name: Convert each image
-        uses: go-to-agency/vectosolve-action@v1
+        uses: Vectosolve/vectosolve-action@v1
         with:
           api_key: ${{ secrets.VECTOSOLVE_API_KEY }}
           file_path: assets/images/logo.png
@@ -91,7 +91,7 @@ jobs:
 
       - name: Convert first changed image
         if: steps.changed.outputs.files != ''
-        uses: go-to-agency/vectosolve-action@v1
+        uses: Vectosolve/vectosolve-action@v1
         with:
           api_key: ${{ secrets.VECTOSOLVE_API_KEY }}
           file_path: ${{ steps.changed.outputs.files }}
@@ -101,7 +101,7 @@ jobs:
 
 ```yaml
 - name: Convert with custom output
-  uses: go-to-agency/vectosolve-action@v1
+  uses: Vectosolve/vectosolve-action@v1
   with:
     api_key: ${{ secrets.VECTOSOLVE_API_KEY }}
     file_path: src/assets/photo.jpg
